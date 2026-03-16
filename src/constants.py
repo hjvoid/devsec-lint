@@ -1,0 +1,4 @@
+SEVERITIES = ("LOW", "MEDIUM", "HIGH")
+DEFAULT_SEVERITY = "LOW"
+SUPPORTED_EXTENSIONS = (".yml", ".yaml")
+WORKFLOW_DIR_PARTS = (".github", "workflows")
