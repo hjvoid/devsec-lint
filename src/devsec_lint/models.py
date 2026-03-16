@@ -11,7 +11,7 @@ class WorkflowDocument:
     data: dict[str, Any]
 
 @dataclass(slots=True)
-class Findings:
+class Finding:
     rule_id: str
     title: str
     severity: str
