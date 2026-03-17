@@ -7,7 +7,7 @@ from src.devsec_lint.rules.base import Rule
 
 FULL_SHA_REGEX = re.compile(r"^[0-9a-fA-F]{40}$")
 
-class UnpinnedAction(Rule):
+class UnpinnedActionRule(Rule):
     rule_id = "actions/unpinned-version"
     title = "Action is not pinned to a full commit SHA"
     severity = "HIGH"
