@@ -6,7 +6,7 @@ from dataclasses import asdict
 
 from src.devsec_lint.models import Finding
 
-def fromat_json(findings: list[Finding], errors: list[str]) -> str:
+def format_json(findings: list[Finding], errors: list[str]) -> str:
     counts = Counter(f.severity for f in findings)
     payload = {
         "summary": {
