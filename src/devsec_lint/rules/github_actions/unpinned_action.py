@@ -2,8 +2,8 @@ from __future__ import annotations
 
 import re
 
-from src.devsec_lint.models import Finding, WorkflowDocument
-from src.devsec_lint.rules.base import Rule
+from devsec_lint.models import Finding, WorkflowDocument
+from devsec_lint.rules.base import Rule
 
 FULL_SHA_REGEX = re.compile(r"^[0-9a-fA-F]{40}$")
 
@@ -65,14 +65,14 @@ class UnpinnedActionRule(Rule):
 
         return findings
 
-def _is_pinned(self, uses_value: str) -> bool:
-    if "@" not in uses_value:
-        return False
-    _, ref = uses_value.split("@", 1)
-    return bool(FULL_SHA_REGEX.fullmatch(ref))
+    def _is_pinned(self, uses_value: str) -> bool:
+        if "@" not in uses_value:
+            return False
+        _, ref = uses_value.split("@", 1)
+        return bool(FULL_SHA_REGEX.fullmatch(ref))
 
-def _find_line(self, raw_text: str, needle: str) -> int | None:
-    for i, line in enumerate(raw_text.splitlines(), start=1):
-        if needle in line:
-            return i
-    return None
+    def _find_line(self, raw_text: str, needle: str) -> int | None:
+        for i, line in enumerate(raw_text.splitlines(), start=1):
+            if needle in line:
+                return i
+        return None

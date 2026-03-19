@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from collections import Counter
 
-from src.devsec_lint.models import Finding
+from devsec_lint.models import Finding
 
 def format_text(findings: list[Finding], errors: list[str]) -> str:
     lines: list[str] = []

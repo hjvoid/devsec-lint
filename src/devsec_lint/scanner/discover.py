@@ -3,7 +3,7 @@ from __future__ import annotations
 from pathlib import Path
 from typing import List
 
-from src.devsec_lint.constants import SUPPORTED_EXTENSIONS, WORKFLOW_DIR_PARTS
+from devsec_lint.constants import SUPPORTED_EXTENSIONS, WORKFLOW_DIR_PARTS
 
 def _is_yaml_file(path: Path) -> bool:
     return path.is_file() and path.suffix.lower() in SUPPORTED_EXTENSIONS

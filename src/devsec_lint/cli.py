@@ -5,13 +5,13 @@ from typing import Annotated
 
 import typer
 
-from src.devsec_lint.constants import DEFAULT_SEVERITY, SEVERITIES
-from src.devsec_lint.exit_codes import SUCCESS, USAGE_ERROR, FAILURE_FOUND
-from src.devsec_lint.formatters import format_json, format_text
-from src.devsec_lint.rules import ALL_RULES
-from src.devsec_lint.scanner.discover import discover_workflow_files
-from src.devsec_lint.scanner.engine import scan_files
-from src.devsec_lint.utils.severity import meets_threshold
+from devsec_lint.constants import DEFAULT_SEVERITY, SEVERITIES
+from devsec_lint.exit_codes import SUCCESS, USAGE_ERROR, FAILURE_FOUND
+from devsec_lint.formatters import format_json, format_text
+from devsec_lint.rules import ALL_RULES
+from devsec_lint.scanner.discover import discover_workflow_files
+from devsec_lint.scanner.engine import scan_files
+from devsec_lint.utils.severity import meets_threshold
 
 app = typer.Typer(help="Static security linting for Github Actions pipelines")
 

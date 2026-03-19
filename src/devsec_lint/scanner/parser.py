@@ -5,7 +5,7 @@ from pathlib import Path
 from ruamel.yaml import YAML
 from ruamel.yaml.error import YAMLError
 
-from src.devsec_lint.models import WorkflowDocument
+from devsec_lint.models import WorkflowDocument
 
 _yaml = YAML(typ="safe")
 
@@ -17,7 +17,7 @@ def load_workflow(path: Path) -> WorkflowDocument:
     try:
         parsed = _yaml.load(raw_text) or {}
     except YAMLError as exc:
-        raise WorkflowParseError(f"Faild to parse YAML: {path}") from exc
+        raise WorkflowParseError(f"Failed to parse YAML: {path}") from exc
 
     if not isinstance(parsed, dict):
         raise WorkflowParseError(f"Workflow route must be a mapping: {path}")

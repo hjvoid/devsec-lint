@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from abc import ABC, abstractmethod
 
-from src.devsec_lint.models import Finding, WorkflowDocument
+from devsec_lint.models import Finding, WorkflowDocument
 
 class Rule(ABC):
     rule_id: str

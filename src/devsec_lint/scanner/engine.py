@@ -2,9 +2,9 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from src.devsec_lint.models import Finding, WorkflowDocument
-from src.devsec_lint.rules.base import Rule
-from src.devsec_lint.scanner.parser import load_workflow, WorkflowParseError
+from devsec_lint.models import Finding, WorkflowDocument
+from devsec_lint.rules.base import Rule
+from devsec_lint.scanner.parser import load_workflow, WorkflowParseError
 
 
 def run_rule(document: WorkflowDocument, rules: list[Rule]) -> list[Finding]:
