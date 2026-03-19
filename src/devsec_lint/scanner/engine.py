@@ -13,7 +13,7 @@ def run_rule(document: WorkflowDocument, rules: list[Rule]) -> list[Finding]:
         findings.extend(rule.check(document))
     return findings
 
-def scan_findings(paths: list[Path], rules: list[Rule]) -> tuple[list[Finding], list[str]]:
+def scan_files(paths: list[Path], rules: list[Rule]) -> tuple[list[Finding], list[str]]:
     findings: list[Finding] = []
     errors: list[str] = []
 
