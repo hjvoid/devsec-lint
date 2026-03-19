@@ -6,3 +6,15 @@ Static security linting for GitHub Actions pipelines.
 
 ```bash
 pip install -e ".[dev]"
+```
+
+## Run 
+
+```bash
+devsec-lint [file_path]
+```
+
+## Run Tests
+```bash
+pytest
+```
